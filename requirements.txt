@@ -1,0 +1,6 @@
+langchain_core==0.3.75
+langchain_groq==0.3.7
+langchain_huggingface==0.3.1
+langchain_openai==0.3.32
+python-dotenv==1.1.1
+streamlit==1.29.0
