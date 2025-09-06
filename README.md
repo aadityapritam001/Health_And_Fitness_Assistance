@@ -28,5 +28,5 @@ This is a personalized **health and fitness assistant** built using **Streamlit*
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/health-fitness-assistant.git
+git clone https://github.com/aadityapritam001/Health_And_Fitness_Assistance.git
 cd health-fitness-assistant
