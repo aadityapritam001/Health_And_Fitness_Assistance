@@ -41,13 +41,16 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 Then install:
 
 pip install -r requirements.txt
+```
 
 ### 3. Set API Keys
 Set your API keys in environment variables (e.g., .env or system env):
-
+```bash
 export OPENAI_API_KEY=your-key
 export GROQ_API_KEY=your-key
+```
 
 ### 4. Run the App
+```bash
 streamlit run app.py
 ```
