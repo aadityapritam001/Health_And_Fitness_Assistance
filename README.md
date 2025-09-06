@@ -34,7 +34,7 @@ cd health-fitness-assistant
 
 ### 2. Install Dependencies
 Create a virtual environment (optional):
-
+```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
@@ -50,3 +50,4 @@ export GROQ_API_KEY=your-key
 
 ### 4. Run the App
 streamlit run app.py
+```
