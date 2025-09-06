@@ -19,7 +19,7 @@ This is a personalized **health and fitness assistant** built using **Streamlit*
 
 ## 📸 Demo Screenshot
 
-![App Screenshot](assets/screenshot.png)
+![App Screenshot](assets/image.png)
 
 ---
 
