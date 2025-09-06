@@ -30,8 +30,9 @@ This is a personalized **health and fitness assistant** built using **Streamlit*
 ```bash
 git clone https://github.com/aadityapritam001/Health_And_Fitness_Assistance.git
 cd health-fitness-assistant
+```
 
-2. Install Dependencies
+### 2. Install Dependencies
 Create a virtual environment (optional):
 
 python -m venv venv
@@ -41,11 +42,11 @@ Then install:
 
 pip install -r requirements.txt
 
-3. Set API Keys
+### 3. Set API Keys
 Set your API keys in environment variables (e.g., .env or system env):
 
 export OPENAI_API_KEY=your-key
 export GROQ_API_KEY=your-key
 
-4. Run the App
+### 4. Run the App
 streamlit run app.py
