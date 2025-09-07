@@ -53,7 +53,7 @@ with st.form("user_form"):
     diet = st.selectbox("Dietary Preference", ["none", "vegetarian", "vegan", "keto", "paleo"])
 
     st.subheader("🧠 LLM Model Selection")
-    llm_choice = st.selectbox("Choose an LLM to generate the response", ["OpenAI", "Groq", "HuggingFace"])
+    llm_choice = st.selectbox("Choose an LLM to generate the response", ["OpenAI", "Groq", "HuggingFace","Mistral","Claude"])
 
     st.subheader("💬 Your Question")
     question = st.text_area("Ask a question", placeholder="e.g., What should I eat for dinner to build muscle?")
@@ -71,6 +71,10 @@ if submitted and question.strip():
             llm = groq_llm()
         elif llm_choice == "HuggingFace":
             llm = huggingface_llm()
+        elif llm_choice == "Mistral":
+            llm = mistral_llm()
+        elif llm_choice == "Claude":
+            llm = claude_llm()
         else:
             st.error("❌ Unknown model selected.")
             st.stop()
