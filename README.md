@@ -1,6 +1,6 @@
 # 🏋️‍♂️ Health & Fitness Assistant (LLM-based Chatbot)
 
-This is a personalized **health and fitness assistant** built using **Streamlit**, **LangChain**, and multiple **LLM providers** like **OpenAI**, **Groq**, and **HuggingFace**. It provides expert fitness, nutrition, and health advice based on the user's profile.
+This is a personalized **health and fitness assistant** built using **Streamlit**, **LangChain**, and multiple **LLM providers** like **OpenAI**, **Deepseek**, **Llama**, **Mistral**, **Groq**, and **HuggingFace**. It provides expert fitness, nutrition, and health advice based on the user's profile.
 
 ---
 
