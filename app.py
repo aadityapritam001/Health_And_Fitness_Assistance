@@ -53,7 +53,7 @@ with st.form("user_form"):
     diet = st.selectbox("Dietary Preference", ["none", "vegetarian", "vegan", "keto", "paleo"])
 
     st.subheader("🧠 LLM Model Selection")
-    llm_choice = st.selectbox("Choose an LLM to generate the response", ["OpenAI", "Groq", "HuggingFace","Mistral","Claude"])
+    llm_choice = st.selectbox("Choose an LLM to generate the response", ["OpenAI", "Llama3","Deepseek","Groq", "HuggingFace","Mistral","Claude"])
 
     st.subheader("💬 Your Question")
     question = st.text_area("Ask a question", placeholder="e.g., What should I eat for dinner to build muscle?")
@@ -67,6 +67,10 @@ if submitted and question.strip():
         # Choose the correct LLM object
         if llm_choice == "OpenAI":
             llm = openai_llm()  # should be a LangChain-compatible LLM instance
+        elif llm_choice == "Llama3":
+            llm = llama3_llm()
+        elif llm_choice == "Deepseek":
+            llm = deepseek_llm()
         elif llm_choice == "Groq":
             llm = groq_llm()
         elif llm_choice == "HuggingFace":

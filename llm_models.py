@@ -3,6 +3,7 @@ from langchain_groq import ChatGroq
 from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
 from langchain_mistralai import ChatMistralAI
 from langchain_anthropic import ChatAnthropic
+from langchain_ollama.llms import OllamaLLM
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser,JsonOutputParser
 from dotenv import load_dotenv
@@ -12,6 +13,11 @@ import os
 load_dotenv()
 
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+
+
+os.environ["LANGCHAIN_PROJECT_NAME"] = os.getenv("LANGCHAIN_PROJECT_NAME")
+# langsmith tracking
+os.environ["LANGCHAIN_TRACKING"] = "true"
 os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
 
 os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")
@@ -20,8 +26,7 @@ os.environ["MISTRAL_API_KEY"] = os.getenv("MISTRAL_API_KEY")
 os.environ["LLAMA4_API_KEY"] = os.getenv("LLAMA4_API_KEY")
 os.environ["ANTHROPIC_API_KEY"] = os.getenv("ANTHROPIC_API_KEY")
 
-# langsmith tracking
-os.environ["LANGCHAIN_TRACKING_V1"] = "true"
+
 
 # __________________ PAID LLMs  _____________________
 ###### OpenAI LLM ######
@@ -77,3 +82,23 @@ def mistral_llm():
     )
     return llm
 
+###### Llama3 LLM ######
+def llama3_llm():
+    llm = OllamaLLM(
+        model="llama3:latest",
+        temperature=0,
+        max_retries=2,
+        # other params...
+    )
+    return llm
+
+
+
+def deepseek_llm():
+    llm = OllamaLLM(
+        model="deepseek-r1:1.5b",
+        temperature=0,
+        max_retries=2,
+        # other params...
+    )
+    return llm
